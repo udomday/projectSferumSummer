@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Книжный магазин</title>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/adaptive.css">
+	<link href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+	<header>
+		<div class="container">
+			<div class = "header__row">
+				<div class = "header__logo">
+					<img src="img/logo/logo.svg" alt="Книжный магазин">
+				</div>
+				<div class = "header__name">
+					Книжный магазин
+				</div>
+				<div class = "header_balance">
+					Баланс <span data-balance></span> руб. 
+				</div>
+				<div class = "header__cart_logo">
+					<img data-cart-open src="img/icon/cart.svg" alt="Книжный магазин">
+					<div class = "counter_cart show"></div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class = "container">
+		<!-- Сортировка, поиск и навигация-->
+		<div class = "mainPage__row">
+			<div class = "mainPage__books">
+				<div class = "mainPage__books_row">
+					<div class = "mainPage__books_sort">
+						<div class = "mainPage__books_sort_price">
+							<div data-sort-price class = "mainPage__books_sort_price_name">
+							Сортировать по цене <img class = "mainPage__books_sort_price_icon" src = "img/icon/sort.svg">
+							</div>
+						</div>
+						<div class = "mainPage__books_sort_category">
+									<div class="select__head">
+										<div data-category class = "select__head_name"><span  data-category  class = "change_category_name">Категория</span> <img class = "select__head__icon" src = "img/icon/switch.svg"></div>
+									</div>
+									<div class = "select__list show"></div>
+						</div>
+						<div data-clear class = "mainPafe__books_reloadSettings show">Отчистить всё</div>
+					</div>
+					<div class = "mainPage__books_search">
+						<img src = "img/icon/search.svg">
+						<input placeholder="Введите название книги" class = "searchBooks" />
+					</div>
+					<div class = "mainPage__books_assortment">
+					<!--Каталог товаров-->
+					</div>
+				</div>
+			</div>
+			<!-- Корзина -->
+			<div class = "mainPage__cart">
+				<div class = "mainPage__cart_row">
+					<div class = "mainPage__cart_logo_row">
+						<div class = "mainPage__cart_name">
+							Корзина
+						</div>
+						<div class = "mainPage__cart_logo">
+							<img src="img/icon/cart.svg" alt="Книжный магазин">
+						</div>
+						<div class = "header_balance header_balance_show">
+							Баланс <span data-balance>10200</span> руб. 
+						</div>
+					</div>
+					<!-- Товары -->
+					<div class = "mainPage__cart_products">
+						<div data-cart-empty class = "mainPage__cart_empty">Нет добавленных книг</div>
+					</div>
+					<div class = "mainPage__cart_buy_row" >
+					<div class = 'mainPage__cartToggle show'>
+						<div class = "mainPage__cart_buy_price">
+							<b></b> руб.
+						</div>
+						<div class = "mainPage__cart_buy_btn">
+							<button data-btn-buy>Купить</button>
+						</div>
+					</div>
+					</div>
+					</div>	
+				</div>
+			</div>
+		</div>	
+		<div class = "conteiner__banner_bg show">
+			<div class = "conteiner__banner">
+				<div class = "container__banner_row">
+					<div class = "conteiner__banner_close"><div data-btn-close class = "conteiner__span__close"><span data-btn-close></span></div></div>
+					<div class = "conteiner__banner_mainInf">Покупка прошла успешно</div>
+				</div>
+			</div>
+		</div>	
+	</div>
+	<script src = "libs/jquery/jquery-3.3.1.min.js"></script>
+	<script src = "js/getRequest.js"></script>
+	<script src = "js/createContent.js"></script>
+	<script src = "js/sort.js"></script>
+	<script src = "js/calcCartPrice.js"></script>
+	<script src = "js/toggleCartStatus.js"></script>
+	<script src = "js/cookie.js"></script>
+	<script src = "js/cart.js"></script>
+</body>
+
+</html>

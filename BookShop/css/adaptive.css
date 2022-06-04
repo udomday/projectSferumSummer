@@ -1,0 +1,31 @@
+@media all and (max-width: 1160px){
+    .book__card{
+        width: 50%;
+    }
+    .mainPage__books{
+        width: 100%;
+    }
+    .mainPage__cart{
+        display: none;
+    }
+
+    .mainPage__cart_open{
+        display: block;
+        position: absolute;
+        height: 1600px;
+        width: 51%;
+        right: 0;
+        top:9px;
+        text-align: center;
+        background-color: white;
+        transform: all 1s;
+    }
+
+    .header__cart_logo {
+        display:block;
+    }
+
+    .header_balance_show{
+        display:block;
+    }
+}
